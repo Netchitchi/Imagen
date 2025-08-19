@@ -6,7 +6,14 @@ export default function Navbar(){
     <ClerkProvider> 
       <div className="flex flex-row justify-between">
         <h1 className="sm:text-sm lg:text-2xl cursor-pointer"> Imagen </h1> 
-        <UserButton />
+        <UserButton
+          appearance={{
+            elements: {
+              userButtonAvatarBox: { width: "32px", height: "32px" },
+              userButtonTrigger: { width: "32px", height: "32px" },
+            },
+          }}
+        />
       </div>
     </ClerkProvider>
   )
