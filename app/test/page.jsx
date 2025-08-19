@@ -23,32 +23,26 @@ export default function Test() {
         <div className="flex-none mt-10"> <Navbar /> </div>
         
         <div className="flex-1 flex flex-col justify-center gap-10 ">
-          <div className="flex justify-center mt-auto md:mt-0"> <Title /> </div>
+          <div className="mt-auto md:mt-0"> <Title /> </div>
 
           {image?.images && (
           <ScrollArea className="h-[200px] w-[350px] rounded-md border"> 
             <Image src={image.images} alt="Generated image" width={600} height={500} /> 
           </ScrollArea>)}  
+
+          <div className="flex justify-center bg-amber-500 mt-auto mb-5 md:mb-0 md:mt-0">
+            <div className="flex flex-row justify-evenly items-center border w-full h-15 lg:w-6/12 rounded-3xl bg-violet-400  hover:shadow-amber-50 ">
+
+              <input type="text" placeholder="Enter your prompt" className="h-9/12 md:w-10/12  outline-0 bg-red-600"/>
+              <button className="bg-black h-[40px] w-[40px] rounded-full grid place-items-center text-white">
+                <ArrowUp className="text-white"/>
+              </button>
+
+            </div>
+          </div>
           
 
-          <div className="flex flex-row justify-center items-center h-[64px] border px-5 rounded-[40px] hover:shadow-[0px_0px_4px_0.8px_#bfe2fd] transition-all duration-600 ease-in-out cursor-pointer mt-auto mb-10 md:mb-0 md:mt-0" >
-            <input 
-            type="text" 
-            placeholder="Generate shorts by prompt" 
-            className="flex-1 bg-transparent text-black placeholder-gray-400 outline-none text-sm justify-center lg:w-1/3" 
-            onChange={(e) => setInputValue(e.target.value)} /> 
-
-            <button 
-              disabled={true} 
-              // onClick={generateImage} 
-              className="flex items-center justify-center
-                w-8 h-8 rounded-full border 
-                transition-all duration-200 bg-black
-              "
-              > 
-              <ArrowUp className="w-4 h-4" color="#ffffff"/> 
-            </button> 
-          </div> 
+    
 
         </div>
       

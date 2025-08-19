@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 export default function Title() {
 
-  const messages = ['Dê vida a sua imaginção','Crie imagens', 'Imagens realistas', 'Tudo em segundos']
+  const messages = ['Dê vida a sua imaginação','Crie imagens', 'Imagens realistas', 'Tudo em segundos']
   const [index, setIndex] = useState(0)
   useEffect(() => {
     const timeOutId = setTimeout(()=>{
